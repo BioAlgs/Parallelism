@@ -1,4 +1,4 @@
-##SSTest: Asymptotic Interaction test for bivariate smoothing spline ANOVA
+## Parallelism: Minimax Nonparametric Parallelism Test
 
 The aim of the sstest is to test whether the signal change along the spatial or temperal domain differently in different group. In general, we model the signal y as an function of spatial or temperal location z and group indicator g as 
 
