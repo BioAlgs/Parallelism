@@ -1,0 +1,15 @@
+Package: GM
+Version: 0.1
+Date: 2019-06-01
+Title: Parallelism: Minimax Nonparametric Parallelism Test
+Authors@R: c(person("Xin Xing", "Developer", role = c("aut", "cre"),
+                     email = "xin_xing@fas.harvard.edu"))
+Author: Xin Xing [aut, cre],
+Maintainer: Xin Xing <xin_xing@fas.harvard.edu>
+Depends: R (>= 3.1.0), gss
+Suggests: 
+Description: Parallelism package is designed for testing whether the spatial or temporal signals in treatment and control groups are parallel.
+License: GPL (>= 2)
+URL: xin.xing.com
+Encoding: UTF-8
+RoxygenNote: 6.1.1
