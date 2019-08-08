@@ -10,6 +10,7 @@ install.packages(c('devtools', 'gss'))
 ```
 Install 'Parallelism' packages:
 ```
+library(devtools)
 install_github("BioAlgs/Parallelism")
 ```
 

@@ -18,13 +18,13 @@
 #' z = c(z,z)
 #' ##the group indictor for each mearsuement
 #' g = c(rep(0,n),rep(1,n))
-#' 
+#' df= data.frame(g=as.factor(g),z=z)
 #' ##generate the measured signal for each group at different locations
 #' fun1 = function(x,delta) 2.5*sin(3*pi*x[,2])*(1-x[,2])*ifelse(x#' [,1]==0,1,0) + ( (2.5+delta)*sin(3*pi*x[,2])*(1-x[,2]) )*#' ifelse(x[,1]==0,0,1)
-#' y = fun1(df, 0.5) + rnorm(2*n)
+#' y = fun1(df, 1) + rnorm(2*n)
 #' 
 #' ##begin the test
-#' res = parallelism(y,z,g)
+#' res = parallelism(y,z,as.factor(g))
 #'}
 #' @export parallelism
 #' @import gss
@@ -48,13 +48,10 @@ parallelism=function(y=y, z=z, g=g){
     ###fitting model
     cat('begin model fitting...\n')
     df = data.frame(y=y, g=as.factor(g), z=z)
-    # ps = ssanova0(y ~ g * z ,type=list(z=list("per",c(0,1))), data=df)
+    ps = ssanova0(y ~ g * z ,type=list(z=list("per",c(0,1))), data=df)
     cat('begin testing...\n')
 
     ###begin testing 
-    ps = ssanova0(y ~ g * z ,type=list(z=list("per",c(0,1))), data=df)
-
-
         object = ps
         newdata=df
         # fitted(ps)
