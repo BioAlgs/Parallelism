@@ -8,7 +8,7 @@ Install the dependent packages:
 ```
 install.packages(c('devtools', 'gss'))
 ```
-Install 'Parallelism' packages:
+Install 'Parallelism' package:
 ```
 library(devtools)
 install_github("BioAlgs/Parallelism")
@@ -19,7 +19,7 @@ In this example, the true curve of the signals from group 0 and 1 are shown in t
 
 ![alt text](./images/curve1.png "eq 3")
 
-We generate signals for each group with gaussian white noise and doing the sstest using the following code:
+We generate signals for each group with gaussian white noise and doing the parallelsm test using the following code:
 
 
 ```R
@@ -65,7 +65,7 @@ Arguments:
 
 Value:
 
-     score the value of the test statisitcs
+     score: the value of the test statisitcs.
 
-     pvalue P-value of the test
+     pvalue: P-value of the test.
 ```

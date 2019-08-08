@@ -5,8 +5,8 @@
 #' @param z the spatial or tempral locations (scaled to [0,1]).
 #' @param g the categorical variable representing the group information.
 #'
-#' @return score the value of the test statisitcs
-#' @return pvalue P-value of the test
+#' @return score: the value of the test statisitcs.
+#' @return pvalue: P-value of the test.
 #'
 #' @examples
 #' \donttest{
