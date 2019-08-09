@@ -25,7 +25,7 @@ We generate signals for each group with gaussian white noise and conduct the par
 library(Parallelism)
 library(gss)
 set.seed(123456)
-n = 300
+n = 200
 ##generate locataions of the spatial or temperal points
 z= seq(0,1,length.out=n)
 z = c(z,z) 
@@ -36,8 +36,6 @@ df= data.frame(g=as.factor(g),z=z)
 fun1 = function(x,delta) 2.5*sin(3*pi*x[,2])*(1-x[,2])*ifelse(x[,1]==0,1,0) + ( (2.5+delta)*sin(3*pi*x[,2])*(1-x[,2]) )*ifelse(x[,1]==0,0,1)
 y = fun1(df, 1) + rnorm(2*n,0, 1)
 
-# plot(y[1:n])
-# poin
 ##begin the test
 res = parallelism(y,z,as.factor(g))
 ```

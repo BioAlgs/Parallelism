@@ -13,7 +13,7 @@
 #' library(gss)
 #' library(Parallelism)
 #' set.seed(123456)
-#' n = 300
+#' n = 200
 #' ##generate locataions of the spatial or temperal points
 #' z= seq(0,1,length.out=n)
 #' z = c(z,z)
