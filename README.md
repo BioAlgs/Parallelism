@@ -44,8 +44,9 @@ Testing Result:
 ```
 begin model fitting...
 begin testing...
+
 the test complete.
-p-value=1.36323458389081e-06
+p-value=0.0104371015740364 
 ```
 
 ### Usage 
