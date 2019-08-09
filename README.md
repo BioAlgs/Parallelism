@@ -24,8 +24,8 @@ We generate signals for each group with gaussian white noise and conduct the par
 ```R
 library(Parallelism)
 library(gss)
-seed(123456)
-n = 200
+set.seed(123456)
+n = 300
 ##generate locataions of the spatial or temperal points
 z= seq(0,1,length.out=n)
 z = c(z,z) 

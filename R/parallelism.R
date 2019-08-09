@@ -12,7 +12,8 @@
 #' \donttest{
 #' library(gss)
 #' library(Parallelism)
-#' n = 200
+#' set.seed(123456)
+#' n = 300
 #' ##generate locataions of the spatial or temperal points
 #' z= seq(0,1,length.out=n)
 #' z = c(z,z)
