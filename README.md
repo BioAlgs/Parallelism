@@ -1,7 +1,6 @@
 ## Parallelism: Minimax Nonparametric Parallelism Test
 
-The aim of the R package "Parallelism" is provide a nonparametric test to test whether the spatial or temporal signals in treatment and control groups are parallel or not. Theretically, the power of the proposed test is minimax optimal.
-
+The aim of the R package "Parallelism" is to provide a nonparametric testing approach to test whether the spatial or temporal signals in treatment and control groups are parallel or not. The power of the proposed test is minimax optimal with theoretical support.
 
 ### Installation
 Install the dependent packages:
@@ -19,7 +18,7 @@ In this example, the true curve of the signals from group 0 and 1 are shown in t
 
 ![alt text](./images/curve1.png "eq 3")
 
-We generate signals for each group with gaussian white noise and doing the parallelsm test using the following code:
+We generate signals for each group with gaussian white noise and conduct the parallelsm test using the following code:
 
 
 ```R
