@@ -4,7 +4,7 @@
 #' @param y the input signal.
 #' @param z the spatial or tempral locations (scaled to [0,1]).
 #' @param g the categorical variable representing the group information.
-#'
+#' @param var_est Ture, if the noise variance is unknown
 #' @return score: the value of the test statisitcs.
 #' @return pvalue: P-value of the test.
 #'
@@ -30,7 +30,7 @@
 #' @export parallelism
 #' @import gss
 
-parallelism=function(y=y, z=z, g=g){
+parallelism=function(y=y, z=z, g=g, var_est=T){
 
     ###Check the input data
     g = as.factor(g)
@@ -122,9 +122,16 @@ parallelism=function(y=y, z=z, g=g){
         Delta = t(delta) %*% delta
         mu = sum(diag(Delta))
         sigma = sqrt(2*sum(diag(Delta%*%Delta)))
-        score = abs(tn - mu)/sigma
+        if(var_est==T){
+            res_est = sqrt(sum((y-fitted(ps))^2)/length(y))
+            score = abs(tn-res_est^2 *mu)/(res_est^2*sigma)
+        }else{
+            score = abs(tn - mu)/sigma
+        }
     pval = 2*pnorm(-abs(score))
     cat('the test complete.\n')
     cat(paste0('p-value=',pval),'\n')
     return(list(score=score, pvalue=pval))
+
+
 }
